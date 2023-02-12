@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "GothamBold";
+  font-weight: 900;
+  src: url("../fonts/Gotham-Bold.woff");
+}
+@font-face {
+  font-family: "GothamMedium";
+  font-weight: 700;
+  src: url("../fonts/Gotham-Medium.woff");
+}
+@font-face {
+  font-family: "GothamLight";
+  font-weight: 400;
+  src: url("../fonts/Gotham-Light.woff");
+}
+
+:root {
+  font-family: "GothamMedium";
+}
+html {
+  background: rgb(23, 23, 23);
+  min-height: 100%;
+}
+
+/* ---- Animation ---- */
+
+/* login component */
+.animate.pop {
+  animation-duration: 1s;
+  animation-name: animate-pop;
+  animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+}
+@keyframes animate-pop {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+/* play btn */
+.card:hover .play-btn {
+  opacity: 1;
+  animation-duration: 0.25s;
+  animation-name: animate-fade;
+  animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+}
+@keyframes animate-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
